@@ -14,7 +14,8 @@ const Index = () => {
       width: '3м',
       lengths: [4, 6, 8, 10],
       priceFrom: 23000,
-      step: '0.65м / 1м'
+      step: '0.65м / 1м',
+      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/3ae66ca9-5613-47a7-9173-3e61ab632798.jpg'
     },
     {
       name: 'Домик',
@@ -22,7 +23,8 @@ const Index = () => {
       width: '3м',
       lengths: [4, 6, 8, 10],
       priceFrom: 31000,
-      step: '0.65м / 1м'
+      step: '0.65м / 1м',
+      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/3ae66ca9-5613-47a7-9173-3e61ab632798.jpg'
     },
     {
       name: 'Кремлевская сказка',
@@ -30,7 +32,8 @@ const Index = () => {
       width: '3м',
       lengths: [4, 6, 8, 10],
       priceFrom: 31000,
-      step: '0.65м / 1м'
+      step: '0.65м / 1м',
+      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/3ae66ca9-5613-47a7-9173-3e61ab632798.jpg'
     },
     {
       name: 'Урожайная',
@@ -38,7 +41,8 @@ const Index = () => {
       width: '3м',
       lengths: [4, 6, 8, 10],
       priceFrom: 20000,
-      step: '0.65м / 1м'
+      step: '0.65м / 1м',
+      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/3ae66ca9-5613-47a7-9173-3e61ab632798.jpg'
     },
     {
       name: 'Радость',
@@ -46,7 +50,8 @@ const Index = () => {
       width: '3м',
       lengths: [4, 6, 8, 10],
       priceFrom: 22000,
-      step: '0.65м / 1м'
+      step: '0.65м / 1м',
+      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/3ae66ca9-5613-47a7-9173-3e61ab632798.jpg'
     },
     {
       name: 'Волжанка',
@@ -54,7 +59,8 @@ const Index = () => {
       width: '3м',
       lengths: [4, 6, 8, 10],
       priceFrom: 21000,
-      step: '0.65м / 1м'
+      step: '0.65м / 1м',
+      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/3ae66ca9-5613-47a7-9173-3e61ab632798.jpg'
     }
   ];
 
@@ -77,13 +83,13 @@ const Index = () => {
       name: 'Пион',
       description: 'Сварной элемент беседки - 3 шт; соединительные перемычки - 6 шт; Доска 25×200×2000 - 12 шт; Поликарбонат - 6 метров',
       priceFrom: 18000,
-      includes: ['Саморез со сверлом 72 шт', 'Болт мебельный 18 шт', 'Гайка 18 шт', 'Грунтозацепы 4 шт']
+      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/226b0ddb-d737-4c0b-bb8a-5c44c1cb8bb8.jpg'
     },
     {
       name: 'Астра',
       description: 'Размер: ширина по основанию 1.73м, ширина по верху 2.43м, высота 2.02м, длина 1.9м',
       priceFrom: 18000,
-      includes: ['Каркас: труба 40×20 мм', 'Столешница и скамьи: обрезная доска', 'Покрытие: сотовый поликарбонат']
+      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/226b0ddb-d737-4c0b-bb8a-5c44c1cb8bb8.jpg'
     }
   ];
 
@@ -153,9 +159,18 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Каталог теплиц</h2>
             <p className="text-gray-600 text-lg">Выберите модель под ваши потребности</p>
           </div>
+          <div className="mb-8 max-w-3xl mx-auto">
+            <div className="bg-green-50 border border-primary/20 rounded-lg p-4 flex items-center gap-3">
+              <Icon name="Shield" size={24} className="text-primary" />
+              <p className="text-gray-700">Все теплицы изготовлены из <span className="font-semibold text-primary">оцинкованной стали</span> — надежная защита от коррозии на долгие годы</p>
+            </div>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {greenhouses.map((greenhouse) => (
-              <Card key={greenhouse.name} className="hover:shadow-lg transition-shadow duration-300">
+              <Card key={greenhouse.name} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div className="aspect-video w-full overflow-hidden bg-gray-100">
+                  <img src={greenhouse.image} alt={greenhouse.name} className="w-full h-full object-cover" />
+                </div>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Icon name="Home" size={24} className="text-primary" />
@@ -244,7 +259,10 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {gazebos.map((gazebo) => (
-              <Card key={gazebo.name} className="hover:shadow-lg transition-shadow duration-300">
+              <Card key={gazebo.name} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div className="aspect-video w-full overflow-hidden bg-gray-100">
+                  <img src={gazebo.image} alt={gazebo.name} className="w-full h-full object-cover" />
+                </div>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-2xl">
                     <Icon name="Tent" size={28} className="text-primary" />
@@ -253,17 +271,6 @@ const Index = () => {
                   <CardDescription className="text-base">{gazebo.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <p className="text-sm font-medium text-gray-700">В комплекте:</p>
-                    <ul className="space-y-1">
-                      {gazebo.includes.map((item) => (
-                        <li key={item} className="text-sm text-gray-600 flex items-center gap-2">
-                          <Icon name="Check" size={16} className="text-primary" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                   <div className="pt-4 border-t border-gray-200">
                     <div className="flex items-baseline justify-between">
                       <span className="text-sm text-gray-600">от</span>
@@ -287,7 +294,10 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Автонавесы</h2>
             <p className="text-gray-600 text-lg">Защита вашего автомобиля от непогоды</p>
           </div>
-          <Card className="max-w-2xl mx-auto hover:shadow-lg transition-shadow duration-300">
+          <Card className="max-w-2xl mx-auto hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+            <div className="aspect-video w-full overflow-hidden bg-gray-100">
+              <img src="https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/37b0463f-38f5-4e82-a4bf-850e92599dc3.jpg" alt="Автонавес" className="w-full h-full object-cover" />
+            </div>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-2xl">
                 <Icon name="Car" size={28} className="text-primary" />
@@ -341,16 +351,25 @@ const Index = () => {
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
-                      <Icon name="Mail" size={20} className="text-gray-400" />
-                      <span className="text-gray-700">info@teplicy.ru</span>
+                      <Icon name="MapPin" size={20} className="text-gray-400" />
+                      <span className="text-gray-700">г. Саранск, ул. Рабочая 95а</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Icon name="Phone" size={20} className="text-gray-400" />
-                      <span className="text-gray-700">+7 (999) 123-45-67</span>
+                      <span className="text-gray-700">+7 (937) 672-20-82</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Icon name="MapPin" size={20} className="text-gray-400" />
-                      <span className="text-gray-700">г. Самара, ул. Садовая, 25</span>
+                      <Icon name="Mail" size={20} className="text-gray-400" />
+                      <span className="text-gray-700">Ooo.tri@inbox.ru</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Icon name="Clock" size={20} className="text-gray-400" />
+                      <div className="text-gray-700">
+                        <p className="font-medium">Режим работы:</p>
+                        <p className="text-sm">Пн-Пт: 9:00 - 17:00</p>
+                        <p className="text-sm">Сб: 9:00 - 14:00</p>
+                        <p className="text-sm">Вс: выходной</p>
+                      </div>
                     </div>
                   </div>
                   <Button className="w-full" variant="outline">
@@ -372,7 +391,7 @@ const Index = () => {
                       <Icon name="Check" size={20} className="text-primary mt-0.5" />
                       <div>
                         <p className="font-medium text-gray-900">По городу</p>
-                        <p className="text-sm text-gray-600">Бесплатно при заказе от 20 000 ₽</p>
+                        <p className="text-sm text-gray-600">от 500 ₽</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
