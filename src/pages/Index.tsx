@@ -108,7 +108,7 @@ const Index = () => {
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Icon name="Sprout" size={32} className="text-primary" />
-              <h1 className="text-2xl font-bold text-primary">Теплицы</h1>
+              <h1 className="text-2xl font-bold text-primary">Поликарбонат и Теплицы</h1>
             </div>
             <div className="hidden md:flex gap-6">
               {['Главная', 'Теплицы', 'Поликарбонат', 'Беседки', 'Автонавесы', 'Контакты'].map((item) => (
@@ -134,7 +134,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-              Теплицы для богатого урожая
+              Поликарбонат и теплицы для богатого урожая
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Качественные теплицы, беседки и автонавесы. Прочный каркас, надежная конструкция, доступные цены.
