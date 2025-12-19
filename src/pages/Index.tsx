@@ -33,7 +33,7 @@ const Index = () => {
       lengths: [4, 6, 8, 10],
       priceFrom: 31000,
       step: '0.65м / 1м',
-      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/3ae66ca9-5613-47a7-9173-3e61ab632798.jpg'
+      image: 'https://cdn.poehali.dev/files/кремлевская сказка.png'
     },
     {
       name: 'Урожайная',
@@ -42,7 +42,7 @@ const Index = () => {
       lengths: [4, 6, 8, 10],
       priceFrom: 20000,
       step: '0.65м / 1м',
-      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/3ae66ca9-5613-47a7-9173-3e61ab632798.jpg'
+      image: 'https://cdn.poehali.dev/files/теплица урожаная.png'
     },
     {
       name: 'Радость',
@@ -51,7 +51,7 @@ const Index = () => {
       lengths: [4, 6, 8, 10],
       priceFrom: 22000,
       step: '0.65м / 1м',
-      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/3ae66ca9-5613-47a7-9173-3e61ab632798.jpg'
+      image: 'https://cdn.poehali.dev/files/волжанка.png'
     },
     {
       name: 'Волжанка',
@@ -60,7 +60,7 @@ const Index = () => {
       lengths: [4, 6, 8, 10],
       priceFrom: 21000,
       step: '0.65м / 1м',
-      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/3ae66ca9-5613-47a7-9173-3e61ab632798.jpg'
+      image: 'https://cdn.poehali.dev/files/волжанка.png'
     }
   ];
 
@@ -83,13 +83,13 @@ const Index = () => {
       name: 'Пион',
       description: 'Сварной элемент беседки - 3 шт; соединительные перемычки - 6 шт; Доска 25×200×2000 - 12 шт; Поликарбонат - 6 метров',
       priceFrom: 18000,
-      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/226b0ddb-d737-4c0b-bb8a-5c44c1cb8bb8.jpg'
+      image: 'https://cdn.poehali.dev/files/пион.png'
     },
     {
       name: 'Астра',
       description: 'Размер: ширина по основанию 1.73м, ширина по верху 2.43м, высота 2.02м, длина 1.9м',
       priceFrom: 18000,
-      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/226b0ddb-d737-4c0b-bb8a-5c44c1cb8bb8.jpg'
+      image: 'https://cdn.poehali.dev/files/беседка премиум.png'
     }
   ];
 
@@ -296,7 +296,7 @@ const Index = () => {
           </div>
           <Card className="max-w-2xl mx-auto hover:shadow-lg transition-shadow duration-300 overflow-hidden">
             <div className="aspect-video w-full overflow-hidden bg-gray-100">
-              <img src="https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/37b0463f-38f5-4e82-a4bf-850e92599dc3.jpg" alt="Автонавес" className="w-full h-full object-cover" />
+              <img src="https://cdn.poehali.dev/files/волжанка.png" alt="Автонавес" className="w-full h-full object-cover" />
             </div>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-2xl">
