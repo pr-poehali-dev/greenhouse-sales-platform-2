@@ -216,6 +216,21 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Поликарбонат и комплектующие</h2>
             <p className="text-gray-600 text-lg">Все необходимое для вашей теплицы</p>
           </div>
+          <div className="mb-8 max-w-3xl mx-auto">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <div className="flex items-start gap-3 mb-3">
+                <Icon name="Award" size={28} className="text-blue-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Качественный поликарбонат</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Мы используем только <span className="font-semibold text-blue-600">высококачественный поликарбонат</span> от проверенных производителей. 
+                    Материал обладает <span className="font-semibold">защитой от УФ-излучения</span>, выдерживает температуры от -40°C до +120°C 
+                    и служит более 10 лет без потери прозрачности. Прочность и долговечность — наши гарантии вашего урожая!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           <Tabs defaultValue="polycarbonate" className="max-w-4xl mx-auto">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="polycarbonate">Поликарбонат</TabsTrigger>
