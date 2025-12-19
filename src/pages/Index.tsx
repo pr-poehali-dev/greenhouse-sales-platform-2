@@ -15,7 +15,7 @@ const Index = () => {
       lengths: [4, 6, 8, 10],
       priceFrom: 23000,
       step: '0.65м / 1м',
-      image: 'https://cdn.poehali.dev/projects/552b7b42-d754-46dd-bc26-70ee03ee40ac/files/3ae66ca9-5613-47a7-9173-3e61ab632798.jpg'
+      image: 'https://cdn.poehali.dev/files/теплица стрелка.png'
     },
     {
       name: 'Домик',
