@@ -296,7 +296,7 @@ const Index = () => {
           </div>
           <Card className="max-w-2xl mx-auto hover:shadow-lg transition-shadow duration-300 overflow-hidden">
             <div className="aspect-video w-full overflow-hidden bg-gray-100">
-              <img src="https://cdn.poehali.dev/files/волжанка.png" alt="Автонавес" className="w-full h-full object-cover" />
+              <img src="https://cdn.poehali.dev/files/автонавес.png" alt="Автонавес" className="w-full h-full object-cover" />
             </div>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-2xl">
