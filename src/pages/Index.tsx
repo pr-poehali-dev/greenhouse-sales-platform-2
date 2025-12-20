@@ -107,8 +107,8 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Icon name="Sprout" size={32} className="text-primary" />
-              <h1 className="text-2xl font-bold text-primary">Поликарбонат и Теплицы</h1>
+              <Icon name="Sprout" size={24} className="text-primary md:w-8 md:h-8" />
+              <h1 className="text-lg md:text-2xl font-bold text-primary">Поликарбонат и Теплицы</h1>
             </div>
             <div className="hidden md:flex gap-6">
               {['Главная', 'Теплицы', 'Поликарбонат', 'Беседки', 'Автонавесы', 'Контакты'].map((item) => (
@@ -130,22 +130,22 @@ const Index = () => {
         </div>
       </header>
 
-      <section id="главная" className="py-20 md:py-32 bg-gradient-to-br from-green-50 to-white">
+      <section id="главная" className="py-12 md:py-32 bg-gradient-to-br from-green-50 to-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+          <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
+            <h2 className="text-3xl md:text-6xl font-bold text-gray-900 leading-tight">
               Поликарбонат и теплицы для богатого урожая
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
               Качественные теплицы, беседки и автонавесы. Прочный каркас, надежная конструкция, доступные цены.
             </p>
-            <div className="flex gap-4 justify-center flex-wrap">
-              <Button size="lg" className="text-lg px-8" onClick={() => scrollToSection('теплицы')}>
-                <Icon name="Leaf" size={20} className="mr-2" />
+            <div className="flex gap-3 md:gap-4 justify-center flex-wrap px-2">
+              <Button size="default" className="text-base md:text-lg px-4 md:px-8" onClick={() => scrollToSection('теплицы')}>
+                <Icon name="Leaf" size={18} className="mr-2" />
                 Выбрать теплицу
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8" onClick={() => scrollToSection('контакты')}>
-                <Icon name="Phone" size={20} className="mr-2" />
+              <Button size="default" variant="outline" className="text-base md:text-lg px-4 md:px-8" onClick={() => scrollToSection('контакты')}>
+                <Icon name="Phone" size={18} className="mr-2" />
                 Связаться с нами
               </Button>
             </div>
@@ -153,16 +153,16 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="теплицы" className="py-20 bg-white">
+      <section id="теплицы" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Каталог теплиц</h2>
-            <p className="text-gray-600 text-lg">Выберите модель под ваши потребности</p>
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Каталог теплиц</h2>
+            <p className="text-gray-600 text-base md:text-lg">Выберите модель под ваши потребности</p>
           </div>
-          <div className="mb-8 max-w-3xl mx-auto">
-            <div className="bg-green-50 border border-primary/20 rounded-lg p-4 flex items-center gap-3">
-              <Icon name="Shield" size={24} className="text-primary" />
-              <p className="text-gray-700">Все теплицы изготовлены из <span className="font-semibold text-primary">оцинкованной стали</span> — надежная защита от коррозии на долгие годы</p>
+          <div className="mb-6 md:mb-8 max-w-3xl mx-auto">
+            <div className="bg-green-50 border border-primary/20 rounded-lg p-3 md:p-4 flex items-start md:items-center gap-3">
+              <Icon name="Shield" size={20} className="text-primary flex-shrink-0 mt-1 md:mt-0" />
+              <p className="text-sm md:text-base text-gray-700">Все теплицы изготовлены из <span className="font-semibold text-primary">оцинкованной стали</span> — надежная защита от коррозии на долгие годы</p>
             </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -195,8 +195,8 @@ const Index = () => {
                   </div>
                   <div className="pt-4 border-t border-gray-200">
                     <div className="flex items-baseline justify-between">
-                      <span className="text-sm text-gray-600">от</span>
-                      <span className="text-3xl font-bold text-primary">{greenhouse.priceFrom.toLocaleString()} ₽</span>
+                      <span className="text-xs md:text-sm text-gray-600">от</span>
+                      <span className="text-2xl md:text-3xl font-bold text-primary">{greenhouse.priceFrom.toLocaleString()} ₽</span>
                     </div>
                   </div>
                   <Button className="w-full">
@@ -210,19 +210,19 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="поликарбонат" className="py-20 bg-gray-50">
+      <section id="поликарбонат" className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Поликарбонат и комплектующие</h2>
-            <p className="text-gray-600 text-lg">Все необходимое для вашей теплицы</p>
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Поликарбонат и комплектующие</h2>
+            <p className="text-gray-600 text-base md:text-lg">Все необходимое для вашей теплицы</p>
           </div>
-          <div className="mb-8 max-w-3xl mx-auto">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <div className="flex items-start gap-3 mb-3">
-                <Icon name="Award" size={28} className="text-blue-600 flex-shrink-0 mt-1" />
+          <div className="mb-6 md:mb-8 max-w-3xl mx-auto">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 md:p-6">
+              <div className="flex items-start gap-3">
+                <Icon name="Award" size={24} className="text-blue-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Качественный поликарбонат</h3>
-                  <p className="text-gray-700 leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">Качественный поликарбонат</h3>
+                  <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                     Мы используем только <span className="font-semibold text-blue-600">высококачественный поликарбонат</span> от проверенных производителей. 
                     Материал обладает <span className="font-semibold">защитой от УФ-излучения</span>, выдерживает температуры от -40°C до +120°C 
                     и служит более 10 лет без потери прозрачности. Прочность и долговечность — наши гарантии вашего урожая!
@@ -266,11 +266,11 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="беседки" className="py-20 bg-white">
+      <section id="беседки" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Беседки</h2>
-            <p className="text-gray-600 text-lg">Комфортный отдых на свежем воздухе</p>
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Беседки</h2>
+            <p className="text-gray-600 text-base md:text-lg">Комфортный отдых на свежем воздухе</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {gazebos.map((gazebo) => (
@@ -279,17 +279,17 @@ const Index = () => {
                   <img src={gazebo.image} alt={gazebo.name} className="w-full h-full object-cover" />
                 </div>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-2xl">
-                    <Icon name="Tent" size={28} className="text-primary" />
+                  <CardTitle className="flex items-center gap-2 text-xl md:text-2xl">
+                    <Icon name="Tent" size={24} className="text-primary" />
                     {gazebo.name}
                   </CardTitle>
-                  <CardDescription className="text-base">{gazebo.description}</CardDescription>
+                  <CardDescription className="text-sm md:text-base">{gazebo.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="pt-4 border-t border-gray-200">
                     <div className="flex items-baseline justify-between">
-                      <span className="text-sm text-gray-600">от</span>
-                      <span className="text-3xl font-bold text-primary">{gazebo.priceFrom.toLocaleString()} ₽</span>
+                      <span className="text-xs md:text-sm text-gray-600">от</span>
+                      <span className="text-2xl md:text-3xl font-bold text-primary">{gazebo.priceFrom.toLocaleString()} ₽</span>
                     </div>
                   </div>
                   <Button className="w-full">
@@ -303,25 +303,25 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="автонавесы" className="py-20 bg-gray-50">
+      <section id="автонавесы" className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Автонавесы</h2>
-            <p className="text-gray-600 text-lg">Защита вашего автомобиля от непогоды</p>
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Автонавесы</h2>
+            <p className="text-gray-600 text-base md:text-lg">Защита вашего автомобиля от непогоды</p>
           </div>
           <Card className="max-w-2xl mx-auto hover:shadow-lg transition-shadow duration-300 overflow-hidden">
             <div className="aspect-video w-full overflow-hidden bg-gray-100">
               <img src="https://cdn.poehali.dev/files/автонавес.png" alt="Автонавес" className="w-full h-full object-cover" />
             </div>
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-2xl">
-                <Icon name="Car" size={28} className="text-primary" />
+              <CardTitle className="flex items-center gap-2 text-xl md:text-2xl">
+                <Icon name="Car" size={24} className="text-primary" />
                 Автонавес стандарт
               </CardTitle>
-              <CardDescription className="text-base">Надежная защита для вашего автомобиля</CardDescription>
+              <CardDescription className="text-sm md:text-base">Надежная защита для вашего автомобиля</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
                 <div className="space-y-2">
                   <p className="text-sm text-gray-600">Ширина</p>
                   <p className="text-lg font-medium">3.5м</p>
@@ -348,12 +348,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="контакты" className="py-20 bg-white">
+      <section id="контакты" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Контакты и доставка</h2>
-              <p className="text-gray-600 text-lg">Свяжитесь с нами любым удобным способом</p>
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Контакты и доставка</h2>
+              <p className="text-gray-600 text-base md:text-lg">Свяжитесь с нами любым удобным способом</p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               <Card>
@@ -431,22 +431,22 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-8 md:py-12">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
             <div className="flex items-center gap-2">
-              <Icon name="Sprout" size={28} className="text-primary" />
-              <span className="text-xl font-bold">Теплицы</span>
+              <Icon name="Sprout" size={24} className="text-primary" />
+              <span className="text-lg md:text-xl font-bold">Теплицы</span>
             </div>
-            <p className="text-gray-400 text-sm">© 2024 Все права защищены</p>
-            <div className="flex gap-4">
-              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
-                <Icon name="Phone" size={20} />
+            <p className="text-gray-400 text-xs md:text-sm">© 2024 Все права защищены</p>
+            <div className="flex gap-3 md:gap-4">
+              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white h-9 w-9 md:h-10 md:w-10">
+                <Icon name="Phone" size={18} />
               </Button>
-              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
-                <Icon name="Mail" size={20} />
+              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white h-9 w-9 md:h-10 md:w-10">
+                <Icon name="Mail" size={18} />
               </Button>
-              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
+              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white h-9 w-9 md:h-10 md:w-10">
                 <Icon name="MessageCircle" size={20} />
               </Button>
             </div>
