@@ -406,7 +406,7 @@ const Index = () => {
                       <Icon name="Check" size={20} className="text-primary mt-0.5" />
                       <div>
                         <p className="font-medium text-gray-900">По городу</p>
-                        <p className="text-sm text-gray-600">от 500 ₽</p>
+                        <p className="text-sm text-gray-600">от 800 ₽</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
