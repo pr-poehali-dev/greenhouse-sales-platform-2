@@ -104,11 +104,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-3 md:px-4 py-3 md:py-4">
           <nav className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Icon name="Sprout" size={24} className="text-primary md:w-8 md:h-8" />
-              <h1 className="text-lg md:text-2xl font-bold text-primary">Поликарбонат и Теплицы</h1>
+            <div className="flex items-center gap-1.5 md:gap-2">
+              <Icon name="Sprout" size={20} className="text-primary md:w-8 md:h-8" />
+              <h1 className="text-base md:text-2xl font-bold text-primary leading-tight">Поликарбонат и Теплицы</h1>
             </div>
             <div className="hidden md:flex gap-6">
               {['Главная', 'Теплицы', 'Поликарбонат', 'Беседки', 'Автонавесы', 'Контакты'].map((item) => (
@@ -130,22 +130,22 @@ const Index = () => {
         </div>
       </header>
 
-      <section id="главная" className="py-12 md:py-32 bg-gradient-to-br from-green-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
-            <h2 className="text-3xl md:text-6xl font-bold text-gray-900 leading-tight">
+      <section id="главная" className="py-8 md:py-32 bg-gradient-to-br from-green-50 to-white">
+        <div className="container mx-auto px-3 md:px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-3 md:space-y-6">
+            <h2 className="text-2xl md:text-6xl font-bold text-gray-900 leading-tight">
               Поликарбонат и теплицы для богатого урожая
             </h2>
-            <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-sm md:text-xl text-gray-600 max-w-2xl mx-auto">
               Качественные теплицы, беседки и автонавесы. Прочный каркас, надежная конструкция, доступные цены.
             </p>
-            <div className="flex gap-3 md:gap-4 justify-center flex-wrap px-2">
-              <Button size="default" className="text-base md:text-lg px-4 md:px-8" onClick={() => scrollToSection('теплицы')}>
-                <Icon name="Leaf" size={18} className="mr-2" />
+            <div className="flex gap-2 md:gap-4 justify-center flex-wrap px-2">
+              <Button size="sm" className="text-sm md:text-lg px-3 md:px-8 h-9 md:h-11" onClick={() => scrollToSection('теплицы')}>
+                <Icon name="Leaf" size={16} className="mr-1.5 md:mr-2" />
                 Выбрать теплицу
               </Button>
-              <Button size="default" variant="outline" className="text-base md:text-lg px-4 md:px-8" onClick={() => scrollToSection('контакты')}>
-                <Icon name="Phone" size={18} className="mr-2" />
+              <Button size="sm" variant="outline" className="text-sm md:text-lg px-3 md:px-8 h-9 md:h-11" onClick={() => scrollToSection('контакты')}>
+                <Icon name="Phone" size={16} className="mr-1.5 md:mr-2" />
                 Связаться с нами
               </Button>
             </div>
@@ -153,54 +153,54 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="теплицы" className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Каталог теплиц</h2>
-            <p className="text-gray-600 text-base md:text-lg">Выберите модель под ваши потребности</p>
+      <section id="теплицы" className="py-8 md:py-20 bg-white">
+        <div className="container mx-auto px-3 md:px-4">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4">Каталог теплиц</h2>
+            <p className="text-gray-600 text-sm md:text-lg">Выберите модель под ваши потребности</p>
           </div>
-          <div className="mb-6 md:mb-8 max-w-3xl mx-auto">
-            <div className="bg-green-50 border border-primary/20 rounded-lg p-3 md:p-4 flex items-start md:items-center gap-3">
-              <Icon name="Shield" size={20} className="text-primary flex-shrink-0 mt-1 md:mt-0" />
-              <p className="text-sm md:text-base text-gray-700">Все теплицы изготовлены из <span className="font-semibold text-primary">оцинкованной стали</span> — надежная защита от коррозии на долгие годы</p>
+          <div className="mb-4 md:mb-8 max-w-3xl mx-auto">
+            <div className="bg-green-50 border border-primary/20 rounded-lg p-3 md:p-4 flex items-start md:items-center gap-2 md:gap-3">
+              <Icon name="Shield" size={18} className="text-primary flex-shrink-0 mt-0.5 md:mt-0" />
+              <p className="text-xs md:text-base text-gray-700">Все теплицы изготовлены из <span className="font-semibold text-primary">оцинкованной стали</span> — надежная защита от коррозии на долгие годы</p>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {greenhouses.map((greenhouse) => (
               <Card key={greenhouse.name} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                 <div className="aspect-video w-full overflow-hidden bg-gray-100">
                   <img src={greenhouse.image} alt={greenhouse.name} className="w-full h-full object-cover" />
                 </div>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Icon name="Home" size={24} className="text-primary" />
+                <CardHeader className="pb-3 md:pb-6">
+                  <CardTitle className="flex items-center gap-2 text-lg md:text-xl">
+                    <Icon name="Home" size={20} className="text-primary" />
                     {greenhouse.name}
                   </CardTitle>
-                  <CardDescription>Профиль {greenhouse.profile}</CardDescription>
+                  <CardDescription className="text-xs md:text-sm">Профиль {greenhouse.profile}</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
+                <CardContent className="space-y-3 md:space-y-4">
+                  <div className="space-y-1.5 md:space-y-2">
+                    <div className="flex justify-between text-xs md:text-sm">
                       <span className="text-gray-600">Ширина:</span>
                       <span className="font-medium">{greenhouse.width}</span>
                     </div>
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-xs md:text-sm">
                       <span className="text-gray-600">Длина:</span>
                       <span className="font-medium">{greenhouse.lengths.join(', ')}м</span>
                     </div>
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-xs md:text-sm">
                       <span className="text-gray-600">Шаг:</span>
                       <span className="font-medium">{greenhouse.step}</span>
                     </div>
                   </div>
-                  <div className="pt-4 border-t border-gray-200">
+                  <div className="pt-3 md:pt-4 border-t border-gray-200">
                     <div className="flex items-baseline justify-between">
-                      <span className="text-xs md:text-sm text-gray-600">от</span>
-                      <span className="text-2xl md:text-3xl font-bold text-primary">{greenhouse.priceFrom.toLocaleString()} ₽</span>
+                      <span className="text-xs text-gray-600">от</span>
+                      <span className="text-xl md:text-3xl font-bold text-primary">{greenhouse.priceFrom.toLocaleString()} ₽</span>
                     </div>
                   </div>
-                  <Button className="w-full">
-                    <Icon name="ShoppingCart" size={18} className="mr-2" />
+                  <Button className="w-full h-9 md:h-10 text-sm md:text-base">
+                    <Icon name="ShoppingCart" size={16} className="mr-1.5 md:mr-2" />
                     Заказать
                   </Button>
                 </CardContent>
@@ -210,19 +210,19 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="поликарбонат" className="py-12 md:py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Поликарбонат и комплектующие</h2>
-            <p className="text-gray-600 text-base md:text-lg">Все необходимое для вашей теплицы</p>
+      <section id="поликарбонат" className="py-8 md:py-20 bg-gray-50">
+        <div className="container mx-auto px-3 md:px-4">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4">Поликарбонат и комплектующие</h2>
+            <p className="text-gray-600 text-sm md:text-lg">Все необходимое для вашей теплицы</p>
           </div>
-          <div className="mb-6 md:mb-8 max-w-3xl mx-auto">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 md:p-6">
-              <div className="flex items-start gap-3">
-                <Icon name="Award" size={24} className="text-blue-600 flex-shrink-0 mt-1" />
+          <div className="mb-4 md:mb-8 max-w-3xl mx-auto">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 md:p-6">
+              <div className="flex items-start gap-2 md:gap-3">
+                <Icon name="Award" size={20} className="text-blue-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">Качественный поликарбонат</h3>
-                  <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                  <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-1.5 md:mb-2">Качественный поликарбонат</h3>
+                  <p className="text-xs md:text-base text-gray-700 leading-relaxed">
                     Мы используем только <span className="font-semibold text-blue-600">высококачественный поликарбонат</span> от проверенных производителей. 
                     Материал обладает <span className="font-semibold">защитой от УФ-излучения</span>, выдерживает температуры от -40°C до +120°C 
                     и служит более 10 лет без потери прозрачности. Прочность и долговечность — наши гарантии вашего урожая!
@@ -232,32 +232,32 @@ const Index = () => {
             </div>
           </div>
           <Tabs defaultValue="polycarbonate" className="max-w-4xl mx-auto">
-            <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="polycarbonate">Поликарбонат</TabsTrigger>
-              <TabsTrigger value="accessories">Комплектующие</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 h-9 md:h-10">
+              <TabsTrigger value="polycarbonate" className="text-xs md:text-sm">Поликарбонат</TabsTrigger>
+              <TabsTrigger value="accessories" className="text-xs md:text-sm">Комплектующие</TabsTrigger>
             </TabsList>
-            <TabsContent value="polycarbonate" className="space-y-4 mt-6">
+            <TabsContent value="polycarbonate" className="space-y-3 md:space-y-4 mt-4 md:mt-6">
               {polycarbonate.map((item) => (
                 <Card key={item.name}>
-                  <CardHeader>
-                    <CardTitle className="text-lg flex items-center gap-2">
-                      <Icon name="Layers" size={20} className="text-primary" />
+                  <CardHeader className="py-3 md:py-6">
+                    <CardTitle className="text-base md:text-lg flex items-center gap-2">
+                      <Icon name="Layers" size={18} className="text-primary" />
                       {item.name}
                     </CardTitle>
-                    <CardDescription>{item.description}</CardDescription>
+                    <CardDescription className="text-xs md:text-sm">{item.description}</CardDescription>
                   </CardHeader>
                 </Card>
               ))}
             </TabsContent>
-            <TabsContent value="accessories" className="space-y-4 mt-6">
+            <TabsContent value="accessories" className="space-y-3 md:space-y-4 mt-4 md:mt-6">
               {accessories.map((item) => (
                 <Card key={item.name}>
-                  <CardHeader>
-                    <CardTitle className="text-lg flex items-center gap-2">
-                      <Icon name="Wrench" size={20} className="text-primary" />
+                  <CardHeader className="py-3 md:py-6">
+                    <CardTitle className="text-base md:text-lg flex items-center gap-2">
+                      <Icon name="Wrench" size={18} className="text-primary" />
                       {item.name}
                     </CardTitle>
-                    <CardDescription>{item.description}</CardDescription>
+                    <CardDescription className="text-xs md:text-sm">{item.description}</CardDescription>
                   </CardHeader>
                 </Card>
               ))}
@@ -266,34 +266,34 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="беседки" className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Беседки</h2>
-            <p className="text-gray-600 text-base md:text-lg">Комфортный отдых на свежем воздухе</p>
+      <section id="беседки" className="py-8 md:py-20 bg-white">
+        <div className="container mx-auto px-3 md:px-4">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4">Беседки</h2>
+            <p className="text-gray-600 text-sm md:text-lg">Комфортный отдых на свежем воздухе</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6 max-w-5xl mx-auto">
             {gazebos.map((gazebo) => (
               <Card key={gazebo.name} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                 <div className="aspect-video w-full overflow-hidden bg-gray-100">
                   <img src={gazebo.image} alt={gazebo.name} className="w-full h-full object-cover" />
                 </div>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-xl md:text-2xl">
-                    <Icon name="Tent" size={24} className="text-primary" />
+                <CardHeader className="pb-3 md:pb-6">
+                  <CardTitle className="flex items-center gap-2 text-lg md:text-2xl">
+                    <Icon name="Tent" size={20} className="text-primary" />
                     {gazebo.name}
                   </CardTitle>
-                  <CardDescription className="text-sm md:text-base">{gazebo.description}</CardDescription>
+                  <CardDescription className="text-xs md:text-base">{gazebo.description}</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="pt-4 border-t border-gray-200">
+                <CardContent className="space-y-3 md:space-y-4">
+                  <div className="pt-3 md:pt-4 border-t border-gray-200">
                     <div className="flex items-baseline justify-between">
-                      <span className="text-xs md:text-sm text-gray-600">от</span>
-                      <span className="text-2xl md:text-3xl font-bold text-primary">{gazebo.priceFrom.toLocaleString()} ₽</span>
+                      <span className="text-xs text-gray-600">от</span>
+                      <span className="text-xl md:text-3xl font-bold text-primary">{gazebo.priceFrom.toLocaleString()} ₽</span>
                     </div>
                   </div>
-                  <Button className="w-full">
-                    <Icon name="ShoppingCart" size={18} className="mr-2" />
+                  <Button className="w-full h-9 md:h-10 text-sm md:text-base">
+                    <Icon name="ShoppingCart" size={16} className="mr-1.5 md:mr-2" />
                     Заказать
                   </Button>
                 </CardContent>
@@ -303,44 +303,44 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="автонавесы" className="py-12 md:py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Автонавесы</h2>
-            <p className="text-gray-600 text-base md:text-lg">Защита вашего автомобиля от непогоды</p>
+      <section id="автонавесы" className="py-8 md:py-20 bg-gray-50">
+        <div className="container mx-auto px-3 md:px-4">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4">Автонавесы</h2>
+            <p className="text-gray-600 text-sm md:text-lg">Защита вашего автомобиля от непогоды</p>
           </div>
           <Card className="max-w-2xl mx-auto hover:shadow-lg transition-shadow duration-300 overflow-hidden">
             <div className="aspect-video w-full overflow-hidden bg-gray-100">
               <img src="https://cdn.poehali.dev/files/автонавес.png" alt="Автонавес" className="w-full h-full object-cover" />
             </div>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-xl md:text-2xl">
-                <Icon name="Car" size={24} className="text-primary" />
+            <CardHeader className="pb-3 md:pb-6">
+              <CardTitle className="flex items-center gap-2 text-lg md:text-2xl">
+                <Icon name="Car" size={20} className="text-primary" />
                 Автонавес стандарт
               </CardTitle>
-              <CardDescription className="text-sm md:text-base">Надежная защита для вашего автомобиля</CardDescription>
+              <CardDescription className="text-xs md:text-base">Надежная защита для вашего автомобиля</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
-                <div className="space-y-2">
-                  <p className="text-sm text-gray-600">Ширина</p>
-                  <p className="text-lg font-medium">3.5м</p>
+            <CardContent className="space-y-3 md:space-y-4">
+              <div className="grid grid-cols-2 gap-2 md:gap-4">
+                <div className="space-y-1 md:space-y-2">
+                  <p className="text-xs md:text-sm text-gray-600">Ширина</p>
+                  <p className="text-base md:text-lg font-medium">3.5м</p>
                 </div>
-                <div className="space-y-2">
-                  <p className="text-sm text-gray-600">Высота</p>
-                  <p className="text-lg font-medium">2.6м</p>
+                <div className="space-y-1 md:space-y-2">
+                  <p className="text-xs md:text-sm text-gray-600">Высота</p>
+                  <p className="text-base md:text-lg font-medium">2.6м</p>
                 </div>
-                <div className="space-y-2">
-                  <p className="text-sm text-gray-600">Длина</p>
-                  <p className="text-lg font-medium">от 4м</p>
+                <div className="space-y-1 md:space-y-2">
+                  <p className="text-xs md:text-sm text-gray-600">Длина</p>
+                  <p className="text-base md:text-lg font-medium">от 4м</p>
                 </div>
-                <div className="space-y-2">
-                  <p className="text-sm text-gray-600">Цена</p>
-                  <p className="text-lg font-bold text-primary">от 22 000 ₽</p>
+                <div className="space-y-1 md:space-y-2">
+                  <p className="text-xs md:text-sm text-gray-600">Цена</p>
+                  <p className="text-base md:text-lg font-bold text-primary">от 22 000 ₽</p>
                 </div>
               </div>
-              <Button className="w-full" size="lg">
-                <Icon name="ShoppingCart" size={18} className="mr-2" />
+              <Button className="w-full h-9 md:h-11 text-sm md:text-base">
+                <Icon name="ShoppingCart" size={16} className="mr-1.5 md:mr-2" />
                 Заказать навес
               </Button>
             </CardContent>
@@ -348,79 +348,79 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="контакты" className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section id="контакты" className="py-8 md:py-20 bg-white">
+        <div className="container mx-auto px-3 md:px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Контакты и доставка</h2>
-              <p className="text-gray-600 text-base md:text-lg">Свяжитесь с нами любым удобным способом</p>
+            <div className="text-center mb-6 md:mb-12">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4">Контакты и доставка</h2>
+              <p className="text-gray-600 text-sm md:text-lg">Свяжитесь с нами любым удобным способом</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6">
               <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Icon name="Phone" size={24} className="text-primary" />
+                <CardHeader className="pb-3 md:pb-6">
+                  <CardTitle className="flex items-center gap-2 text-lg md:text-xl">
+                    <Icon name="Phone" size={20} className="text-primary" />
                     Связаться с нами
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <Icon name="MapPin" size={20} className="text-gray-400" />
-                      <span className="text-gray-700">г. Саранск, ул. Рабочая 95</span>
+                <CardContent className="space-y-3 md:space-y-4">
+                  <div className="space-y-2.5 md:space-y-3">
+                    <div className="flex items-center gap-2 md:gap-3">
+                      <Icon name="MapPin" size={18} className="text-gray-400 flex-shrink-0" />
+                      <span className="text-xs md:text-base text-gray-700">г. Саранск, ул. Рабочая 95</span>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <Icon name="Phone" size={20} className="text-gray-400" />
-                      <span className="text-gray-700">+7 (937) 672-20-82</span>
+                    <div className="flex items-center gap-2 md:gap-3">
+                      <Icon name="Phone" size={18} className="text-gray-400 flex-shrink-0" />
+                      <span className="text-xs md:text-base text-gray-700">+7 (937) 672-20-82</span>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <Icon name="Mail" size={20} className="text-gray-400" />
-                      <span className="text-gray-700">Ooo.tri@inbox.ru</span>
+                    <div className="flex items-center gap-2 md:gap-3">
+                      <Icon name="Mail" size={18} className="text-gray-400 flex-shrink-0" />
+                      <span className="text-xs md:text-base text-gray-700">Ooo.tri@inbox.ru</span>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <Icon name="Clock" size={20} className="text-gray-400" />
+                    <div className="flex items-start gap-2 md:gap-3">
+                      <Icon name="Clock" size={18} className="text-gray-400 flex-shrink-0 mt-0.5" />
                       <div className="text-gray-700">
-                        <p className="font-medium">Режим работы:</p>
-                        <p className="text-sm">Пн-Пт: 9:00 - 17:00</p>
-                        <p className="text-sm">Сб: 9:00 - 14:00</p>
-                        <p className="text-sm">Вс: выходной</p>
+                        <p className="font-medium text-xs md:text-base">Режим работы:</p>
+                        <p className="text-xs md:text-sm">Пн-Пт: 9:00 - 17:00</p>
+                        <p className="text-xs md:text-sm">Сб: 9:00 - 14:00</p>
+                        <p className="text-xs md:text-sm">Вс: выходной</p>
                       </div>
                     </div>
                   </div>
-                  <Button className="w-full" variant="outline">
-                    <Icon name="MessageCircle" size={18} className="mr-2" />
+                  <Button className="w-full h-9 md:h-10 text-sm md:text-base" variant="outline">
+                    <Icon name="MessageCircle" size={16} className="mr-1.5 md:mr-2" />
                     Написать в WhatsApp
                   </Button>
                 </CardContent>
               </Card>
               <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Icon name="Truck" size={24} className="text-primary" />
+                <CardHeader className="pb-3 md:pb-6">
+                  <CardTitle className="flex items-center gap-2 text-lg md:text-xl">
+                    <Icon name="Truck" size={20} className="text-primary" />
                     Доставка
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      <Icon name="Check" size={20} className="text-primary mt-0.5" />
+                <CardContent className="space-y-3 md:space-y-4">
+                  <div className="space-y-2.5 md:space-y-3">
+                    <div className="flex items-start gap-2 md:gap-3">
+                      <Icon name="Check" size={18} className="text-primary mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-medium text-gray-900">По городу</p>
-                        <p className="text-sm text-gray-600">от 800 ₽</p>
+                        <p className="font-medium text-gray-900 text-xs md:text-base">По городу</p>
+                        <p className="text-xs md:text-sm text-gray-600">от 800 ₽</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <Icon name="Check" size={20} className="text-primary mt-0.5" />
+                    <div className="flex items-start gap-2 md:gap-3">
+                      <Icon name="Check" size={18} className="text-primary mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-medium text-gray-900">По области</p>
-                        <p className="text-sm text-gray-600">Рассчитывается индивидуально</p>
+                        <p className="font-medium text-gray-900 text-xs md:text-base">По области</p>
+                        <p className="text-xs md:text-sm text-gray-600">Рассчитывается индивидуально</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <Icon name="Check" size={20} className="text-primary mt-0.5" />
+                    <div className="flex items-start gap-2 md:gap-3">
+                      <Icon name="Check" size={18} className="text-primary mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-medium text-gray-900">Сборка</p>
-                        <p className="text-sm text-gray-600">Профессиональная установка</p>
+                        <p className="font-medium text-gray-900 text-xs md:text-base">Сборка</p>
+                        <p className="text-xs md:text-sm text-gray-600">Профессиональная установка</p>
                       </div>
                     </div>
                   </div>
@@ -431,23 +431,23 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-8 md:py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
-            <div className="flex items-center gap-2">
-              <Icon name="Sprout" size={24} className="text-primary" />
-              <span className="text-lg md:text-xl font-bold">Теплицы</span>
+      <footer className="bg-gray-900 text-white py-6 md:py-12">
+        <div className="container mx-auto px-3 md:px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4">
+            <div className="flex items-center gap-1.5 md:gap-2">
+              <Icon name="Sprout" size={20} className="text-primary" />
+              <span className="text-base md:text-xl font-bold">Теплицы</span>
             </div>
-            <p className="text-gray-400 text-xs md:text-sm">© 2024 Все права защищены</p>
-            <div className="flex gap-3 md:gap-4">
-              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white h-9 w-9 md:h-10 md:w-10">
-                <Icon name="Phone" size={18} />
+            <p className="text-gray-400 text-xs">© 2024 Все права защищены</p>
+            <div className="flex gap-2 md:gap-4">
+              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white h-8 w-8 md:h-10 md:w-10">
+                <Icon name="Phone" size={16} />
               </Button>
-              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white h-9 w-9 md:h-10 md:w-10">
-                <Icon name="Mail" size={18} />
+              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white h-8 w-8 md:h-10 md:w-10">
+                <Icon name="Mail" size={16} />
               </Button>
-              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white h-9 w-9 md:h-10 md:w-10">
-                <Icon name="MessageCircle" size={20} />
+              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white h-8 w-8 md:h-10 md:w-10">
+                <Icon name="MessageCircle" size={16} />
               </Button>
             </div>
           </div>
